@@ -27,15 +27,15 @@ const app = new Vue ({
         todo: [
             {
                 text: 'Bere il latte',
-                done: true,
-            },
-            {
-                text: 'Mangiare una cotoletta',
                 done: false,
             },
             {
-                text: 'Lavarsi l\'apparato di golgi',
+                text: 'Mangiare una cotoletta',
                 done: true,
+            },
+            {
+                text: 'Lavarsi l\'apparato di golgi',
+                done: false,
             },
         ]
     },
