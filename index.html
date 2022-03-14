@@ -16,11 +16,10 @@
         </div>
         <div class="todo-list">
             <ul>
-                <li><span>MANGIARE COTOLETTE</span> <button>X</button></li>
-                <li><span>MANGIARE COTOLETTE</span> <button>X</button></li>
-                <li><span>MANGIARE COTOLETTE</span> <button>X</button></li>
-                <li><span>MANGIARE COTOLETTE</span> <button>X</button></li>
-                <li><span>MANGIARE COTOLETTE</span> <button>X</button></li>
+                <li v-for="(item, index) in todo">
+                    {{item.text}}
+                    <button>X</button>
+                </li>
             </ul>
         </div>
     </div>

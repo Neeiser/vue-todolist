@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .app{
@@ -60,4 +61,8 @@ li button{
 li button:hover{
     background-color: #8a8a8a;
     cursor: pointer;
+}
+
+.is-done{
+    text-decoration: line-through;
 }
