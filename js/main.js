@@ -45,6 +45,7 @@ const app = new Vue ({
             this.todo.splice(index, 1)
         },
         addTask: function(){
+            if(this.newTodo !== '')
             this.todo.push({
                 text: this.newTodo, done:false
             })
