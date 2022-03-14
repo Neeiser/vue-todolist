@@ -11,14 +11,14 @@
 <body>
     <div class="app">
         <div class="todo-add">
-            <input type="text" size="1" placeholder="Nuovo Todo" name="text-input" id="text-input">
-            <button id="submit-text-input">Aggiungi</button>
+            <input @keydown.enter="addTask" v-model='newTodo' type="text" size="1" placeholder="Nuovo Todo" name="text-input" id="text-input">
+            <button @click='addTask' id="submit-text-input">Aggiungi</button>
         </div>
         <div class="todo-list">
             <ul>
                 <li v-for="(item, index) in todo">
-                    <span v-bind:class="{ 'is-done': item.done }">{{item.text}}</span>
-                    <button @click="removeTask">X</button>
+                    <span @click="doneLine(item)" v-bind:class="{ 'is-done': item.done }">{{item.text}}</span>
+                    <button @click="removeTask(index)">X</button>
                 </li>
             </ul>
         </div>

@@ -24,6 +24,7 @@ creare un nuovo todo, che quindi viene aggiunto alla lista dei todo esistenti.
 const app = new Vue ({
     el: '.app',
     data: {
+        newTodo:'',
         todo: [
             {
                 text: 'Bere il latte',
@@ -42,6 +43,15 @@ const app = new Vue ({
     methods: {
         removeTask: function (index){
             this.todo.splice(index, 1)
+        },
+        addTask: function(){
+            this.todo.push({
+                text: this.newTodo, done:false
+            })
+            this.newTodo=''
+        },
+        doneLine: function(item){
+            item.done = !item.done;
         }
     }
 })
