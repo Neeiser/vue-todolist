@@ -16,9 +16,9 @@
         </div>
         <div class="todo-list">
             <ul>
-                <li v-for="(item, index) in todo" v-bind:class="{ 'is-done': item.done }">
-                    {{item.text}}
-                    <button>X</button>
+                <li v-for="(item, index) in todo">
+                    <span v-bind:class="{ 'is-done': item.done }">{{item.text}}</span>
+                    <button @click="removeTask">X</button>
                 </li>
             </ul>
         </div>
