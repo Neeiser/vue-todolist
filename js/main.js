@@ -32,7 +32,7 @@ const app = new Vue ({
             },
             {
                 text: 'Mangiare una cotoletta',
-                done: true,
+                done: false,
             },
             {
                 text: 'Lavarsi l\'apparato di golgi',
