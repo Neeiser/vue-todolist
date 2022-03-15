@@ -12,7 +12,7 @@
     <div class="app">
         <h1>TASK TABLE</h1>
         <div class="todo-add">
-            <input @keydown.enter="addTask" v-model='newTodo' type="text" size="1" placeholder="Nuovo Todo" name="text-input" id="text-input">
+            <input @keydown.enter="addTask" v-model.trim='newTodo' type="text" size="1" placeholder="Nuovo Todo" name="text-input" id="text-input">
             <button @click='addTask' id="submit-text-input">Aggiungi</button>
         </div>
         <div class="todo-list">
